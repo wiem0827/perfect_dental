@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Perfect Dental Process</title>
+<style>
+:root{--ink:#183148;--muted:#64748b;--paper:#f6f8fb;--card:#fff;--line:#e4eaf1;--blue:#1976d2;--navy:#12324a;--teal:#0f9c94;--red:#c13d4a;--orange:#d98219;--green:#1e9a67}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.45 Inter,Segoe UI,Arial,sans-serif}.app{max-width:1480px;margin:auto;padding:28px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}.brand{display:flex;gap:12px;align-items:center}.mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,var(--blue),var(--teal));color:white;font-size:22px;font-weight:700;display:grid;place-items:center}.brand h1{font-size:20px;margin:0}.brand p{margin:1px 0 0;color:var(--muted)}button{font:inherit;cursor:pointer;border:0}.primary{background:var(--blue);color:#fff;padding:10px 15px;border-radius:9px;font-weight:600}.ghost{background:#edf3f9;color:var(--navy);padding:9px 12px;border-radius:8px}.layout{display:grid;grid-template-columns:220px 1fr;gap:22px}.side,.panel,.metric{background:var(--card);border:1px solid var(--line);border-radius:14px}.side{padding:12px;height:max-content}.nav{width:100%;text-align:left;background:transparent;padding:11px;border-radius:8px;color:var(--muted);margin:2px 0}.nav.active{color:var(--blue);background:#edf6ff;font-weight:600}.lock{margin:18px 8px 4px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}.access{display:grid;gap:7px;margin-top:8px}.access select,.access input{width:100%;border:1px solid var(--line);border-radius:7px;padding:8px;background:#fff;color:var(--ink);font:inherit}.access button{padding:8px;border-radius:7px;background:var(--navy);color:#fff;font-size:12px;font-weight:600}.access-status{margin:0;color:var(--muted);font-size:11px}.access-status.error{color:var(--red)}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-bottom:18px}.metric{padding:16px}.metric label{color:var(--muted);font-size:12px}.metric strong{display:block;font-size:25px;margin:5px 0}.metric span{font-size:12px;color:var(--muted)}.dot{display:inline-block;width:7px;height:7px;border-radius:99px;background:var(--teal);margin-right:5px}.dot.warn{background:var(--orange)}.dot.red{background:var(--red)}.panel{padding:18px}.panelhead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:15px}.panel h2{font-size:16px;margin:0}.controls{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.search,select{border:1px solid var(--line);border-radius:8px;padding:9px 10px;background:#fff;color:var(--ink)}.search{width:220px}.notice{display:none;background:#fff4e6;border:1px solid #ffd8a8;color:#8b4b0b;border-radius:10px;padding:11px 13px;margin:0 0 14px}.notice.show{display:flex;justify-content:space-between;align-items:center}.tablewrap{overflow:auto}table{border-collapse:collapse;width:100%;min-width:1260px;font-size:13px}th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.035em;text-align:left;padding:9px 8px;border-bottom:1px solid var(--line)}td{padding:12px 8px;border-bottom:1px solid var(--line);vertical-align:middle}.patient{font-weight:600}.date{white-space:nowrap;color:#42576c}.sub{display:block;font-size:11px;color:var(--muted);font-weight:400}.issue{max-width:180px;color:#8b4b0b}.stepper{display:flex;align-items:center;gap:3px;min-width:115px}.step{width:18px;height:18px;border-radius:50%;border:2px solid #cbd5e1;background:#fff;color:#fff;font-size:11px;display:grid;place-items:center}.step.ok{background:var(--green);border-color:var(--green)}.step.current{border-color:var(--blue);box-shadow:0 0 0 3px #dceefe}.connector{height:2px;width:16px;background:#dce3ea}.connector.ok{background:var(--green)}.badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:11px;font-weight:600}.progress{background:#e8f6ef;color:#16754d}.delivered{background:#e7f1ff;color:#1765b2}.late{background:#fff1f1;color:#bd3442}.action{display:inline-grid;place-items:center;width:29px;height:29px;border-radius:7px;background:#f1f5f9;color:#476176;margin-right:3px;font-size:15px}.action.delivery{background:#e7f7f5;color:#087c75}.pagination{display:flex;justify-content:space-between;align-items:center;padding-top:15px;color:var(--muted)}.pages{display:flex;gap:5px}.pages button{background:#fff;border:1px solid var(--line);min-width:30px;height:30px;border-radius:7px;color:var(--muted)}.pages button.current{background:var(--navy);border-color:var(--navy);color:#fff}.archive{margin-top:18px}.modal{position:fixed;inset:0;background:#10283b88;display:none;place-items:center;padding:18px}.modal.show{display:grid}.modalbox{background:white;border-radius:14px;padding:22px;width:min(610px,100%);box-shadow:0 18px 50px #132b3b55}.modalhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:15px}.modal h3{margin:0}.close{background:#eef3f7;border-radius:7px;font-size:20px;color:var(--muted);width:30px;height:30px}.form{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.form label{font-size:12px;color:var(--muted);display:grid;gap:5px}.form input,.form select,.form textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:9px;font:inherit;resize:vertical}.form .wide{grid-column:span 2}.modalfoot{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}@media(max-width:850px){.layout{grid-template-columns:1fr}.side{display:flex;gap:4px;overflow:auto}.nav{white-space:nowrap;width:auto}.lock{display:none}.metrics{grid-template-columns:repeat(2,1fr)}.top{align-items:flex-start;gap:15px}.top .primary{white-space:nowrap}}@media(max-width:500px){.app{padding:16px}.top{flex-direction:column}.metrics{grid-template-columns:1fr}.panelhead{align-items:flex-start;flex-direction:column}.search{width:100%}.form{grid-template-columns:1fr}.form .wide{grid-column:span 1}}
+</style></head>
+<body><main class="app" id="appShell"><header class="top"><div class="brand"><div class="mark">🦷</div><div><h1>Perfect Dental Process</h1><p>Suivi des travaux &amp; livraisons</p></div></div><button class="primary" id="add">＋ Nouveau travail</button></header>
+<div class="layout"><aside class="side"><button class="nav active" data-view="suivi">▦ &nbsp; Suivi des travaux</button><button class="nav" data-view="retards">⚠ &nbsp; Alertes céramique</button><button class="nav" data-view="archives">▣ &nbsp; Archives</button><div class="lock">Accès utilisateur<div class="access"><select id="accessRole" aria-label="Type d’accès"><option value="observateur">Observateur</option><option value="éditeur">Éditeur</option></select><input id="accessCode" type="password" inputmode="numeric" placeholder="Code d’accès"><button type="button" id="activateAccess">Activer l’accès</button><p class="access-status" id="accessStatus">Mode actuel : Observateur</p><button type="button" id="configureOnline" style="margin-top:5px;background:#1976d2;color:#fff;border-radius:7px;padding:8px;font-size:12px">⚙ Configuration en ligne</button></div></div></aside>
+<section><div class="metrics"><div class="metric"><label>Travaux en cours</label><strong id="countCurrent">0</strong><span><i class="dot"></i>en fabrication</span></div><div class="metric"><label>En céramique</label><strong id="countCeramic">0</strong><span><i class="dot"></i>étape active</span></div><div class="metric"><label>En contrôle</label><strong id="countControl">0</strong><span><i class="dot warn"></i>à vérifier</span></div><div class="metric"><label>Retards à réclamer</label><strong id="countLate">0</strong><span><i class="dot red"></i>hors délai</span></div></div>
+<div class="panel"><div class="panelhead"><div><h2 id="title">Travaux en cours</h2><span style="color:var(--muted);font-size:12px" id="subtitle">Mise à jour en temps réel</span></div><div class="controls"><input class="search" id="search" placeholder="Rechercher un patient ou docteur"><select id="department"><option value="">Tous les départements</option><option>Céramique</option><option>Contrôle</option><option>Emballage</option></select></div></div><div class="notice" id="notice"><span>⚠ <b id="lateMsg">Travail(s) attendu(s) en céramique.</b> Date d’entrée dépassée : veuillez réclamer le retard.</span><button class="ghost" id="dismiss">Masquer 24 h</button></div><div class="tablewrap"><table><thead><tr><th>Étapes</th><th>Docteur</th><th>Patient</th><th>Entrée travail</th><th>Sortie prévue</th><th>Céramique prévue</th><th>Entrée céramique</th><th>Durée</th><th>Entrée contrôle</th><th>Problème de travail</th><th>État</th><th>Actions</th></tr></thead><tbody id="rows"></tbody></table></div><div class="pagination"><span id="pageInfo"></span><div class="pages" id="pages"></div></div></div></section></div></main>
+<div class="modal" id="modal"><div class="modalbox"><div class="modalhead"><h3 id="modalTitle">Nouveau travail</h3><button class="close" id="close">×</button></div><form id="form"><div class="form"><label>Nom du docteur<input required name="doctor" placeholder="Dr Nom"></label><label>Patient<input required name="patient" placeholder="Nom du patient"></label><label>Entrée du travail<input required type="datetime-local" name="workIn"></label><label>Sortie prévue<input required type="datetime-local" name="due"></label><label>Entrée céramique prévue<input required type="datetime-local" name="ceramicDue"></label><label>Entrée céramique réelle<input type="datetime-local" name="ceramicIn"></label><label>Entrée contrôle<input type="datetime-local" name="controlIn"></label><label>Département<select name="department"><option>Céramique</option><option>Contrôle</option><option>Emballage</option></select></label><label class="wide">Problème de travail<textarea name="issue" rows="3" placeholder="Décrivez le problème rencontré, si nécessaire"></textarea></label></div><div class="modalfoot"><button type="button" class="ghost" id="cancel">Annuler</button><button class="primary" type="submit">Enregistrer</button></div></form></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<div class="modal" id="configModal"><div class="modalbox"><div class="modalhead"><h3>Connexion du tableau partagé</h3><button class="close" id="configClose">×</button></div><p style="color:#64748b;font-size:13px">Collez ici l’URL du projet Supabase et sa clé <b>Publishable</b>. Ne mettez jamais une clé Secret/Service Role.</p><div class="form"><label class="wide">URL du projet Supabase<input id="cfgUrl" placeholder="https://xxxxxxxx.supabase.co"></label><label class="wide">Clé Publishable<input id="cfgKey" placeholder="sb_publishable_..."></label></div><div class="modalfoot"><button class="ghost" id="configCancel">Annuler</button><button class="primary" id="configSave">Connecter</button></div></div></div>
+<script>
+// === PERFECT DENTAL ONLINE CONFIGURATION ===
+// Put your Supabase Project URL and PUBLISHABLE key here after creating the project.
+// Never put a secret/service_role key in this file.
+const SUPABASE_URL = localStorage.getItem("pd-supabase-url") || "https://jyovnyhfbxakybkpmxjr.supabase.co";
+const SUPABASE_KEY = localStorage.getItem("pd-supabase-key") || "sb_publishable_ejxSTw9A6-n2exT9XRZv5g_U03DEDqq";
+const DB_CONFIGURED = SUPABASE_URL.startsWith("https://") && !SUPABASE_URL.includes("YOUR_") && SUPABASE_KEY && !SUPABASE_KEY.includes("YOUR_");
+const sb = DB_CONFIGURED && window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
+let online = DB_CONFIGURED, syncChannel = null;
+
+function showConnectionBanner(msg, ok=false){
+  let b=document.getElementById("onlineBanner");
+  if(!b){b=document.createElement("div");b.id="onlineBanner";b.style="position:fixed;left:16px;bottom:16px;z-index:9999;padding:10px 14px;border-radius:10px;font:600 13px Segoe UI,Arial;box-shadow:0 8px 24px #0002";document.body.appendChild(b);}
+  b.textContent=msg; b.style.background=ok?"#e8f6ef":"#fff4e6"; b.style.color=ok?"#16754d":"#8b4b0b";
+}
+
+const seed=[{id:1,doctor:'Dr A. Benali',patient:'Nadia K.',workIn:'2026-09-04T09:30',due:'2026-09-10T16:00',ceramicDue:'2026-09-06T12:00',ceramicIn:'',controlIn:'',department:'Céramique',status:'En cours'},{id:2,doctor:'Dr S. Morel',patient:'Karim O.',workIn:'2026-09-06T10:15',due:'2026-09-12T14:00',ceramicDue:'2026-09-07T12:00',ceramicIn:'2026-09-07T08:45',controlIn:'',department:'Céramique',status:'En cours'},{id:3,doctor:'Dr R. Diallo',patient:'Lina B.',workIn:'2026-09-05T11:00',due:'2026-09-09T15:00',ceramicDue:'2026-09-06T13:00',ceramicIn:'2026-09-06T13:30',controlIn:'2026-09-08T09:10',department:'Contrôle',status:'En cours'},{id:4,doctor:'Dr M. Laurent',patient:'Yanis C.',workIn:'2026-09-01T08:30',due:'2026-09-07T17:00',ceramicDue:'2026-09-02T09:00',ceramicIn:'2026-09-02T10:00',controlIn:'2026-09-04T14:15',department:'Emballage',status:'Livré'}];
+let jobs=[],view='suivi',page=1,editing=null;const per=5;const $=s=>document.querySelector(s);const fmt=v=>v?new Date(v).toLocaleString('fr-FR',{dateStyle:'short',timeStyle:'short'}):'—';const esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+async function loadJobs(){
+  if(!sb){ jobs=JSON.parse(localStorage.getItem('atelier-jobs')||'null')||seed; online=false; showConnectionBanner('Mode local : configurez Supabase pour partager le tableau.',false); render(); return; }
+  const {data,error}=await sb.from('jobs').select('*').order('id',{ascending:false});
+  if(error){ console.error(error); jobs=[]; showConnectionBanner('Connexion Supabase impossible : '+error.message,false); render(); return; }
+  jobs=(data||[]).map(fromDb); online=true; showConnectionBanner('Tableau partagé en ligne — synchronisation active',true); render();
+}
+function toDb(j){return {id:j.id&&typeof j.id==='number'?j.id:undefined,doctor:j.doctor,patient:j.patient,work_in:j.workIn,due:j.due,ceramic_due:j.ceramicDue,ceramic_in:j.ceramicIn||null,control_in:j.controlIn||null,department:j.department,issue:j.issue||null,status:j.status||'En cours'};}
+function fromDb(r){return {id:r.id,doctor:r.doctor,patient:r.patient,workIn:r.work_in,due:r.due,ceramicDue:r.ceramic_due,ceramicIn:r.ceramic_in||'',controlIn:r.control_in||'',department:r.department,status:r.status,issue:r.issue||''};}
+async function saveJob(j){
+  if(!sb){localStorage.setItem('atelier-jobs',JSON.stringify(jobs));return true;}
+  const payload=toDb(j); delete payload.id;
+  const {data,error}=await sb.from('jobs').insert(payload).select().single();
+  if(error){alert("Erreur d'enregistrement en ligne : "+error.message);return false;}
+  Object.assign(j,fromDb(data)); return true;
+}
+async function updateJob(j){
+  if(!sb){localStorage.setItem('atelier-jobs',JSON.stringify(jobs));return true;}
+  const {data,error}=await sb.from('jobs').update(toDb(j)).eq('id',j.id).select().single();
+  if(error){alert("Erreur de modification en ligne : "+error.message);return false;}
+  Object.assign(j,fromDb(data)); return true;
+}
+async function deleteJob(j){
+  if(!sb){jobs=jobs.filter(x=>x.id!==j.id);localStorage.setItem('atelier-jobs',JSON.stringify(jobs));return true;}
+  const {error}=await sb.from('jobs').delete().eq('id',j.id);
+  if(error){alert("Erreur de suppression en ligne : "+error.message);return false;}
+  jobs=jobs.filter(x=>x.id!==j.id); return true;
+}
+function setupRealtime(){
+  if(!sb)return;
+  syncChannel=sb.channel('perfect-dental-jobs')
+    .on('postgres_changes',{event:'*',schema:'public',table:'jobs'},payload=>{
+      if(payload.eventType==='INSERT'){const j=fromDb(payload.new);if(!jobs.some(x=>x.id===j.id))jobs.unshift(j);}
+      if(payload.eventType==='UPDATE'){const j=fromDb(payload.new);const i=jobs.findIndex(x=>x.id===j.id);if(i>=0)jobs[i]=j;else jobs.unshift(j);}
+      if(payload.eventType==='DELETE'){jobs=jobs.filter(x=>x.id!==payload.old.id);}
+      render();
+    }).subscribe();
+}
+function saveAlertUntil(){localStorage.setItem('atelier-alert-until',Date.now()+86400000);}
+function ceramicDeadline(j){return j.ceramicDue||j.due}function late(j){return j.status!=='Livré'&&!j.ceramicIn&&new Date(ceramicDeadline(j))<new Date()}function duration(j){if(!j.ceramicIn)return 'En attente';let h=Math.max(0,(new Date(j.ceramicIn)-new Date(j.workIn))/36e5);return h<24?Math.round(h)+' h':Math.floor(h/24)+' j '+Math.round(h%24)+' h'}function steps(j){let a=['ok',j.ceramicIn?'ok':'current',j.controlIn?'ok':'',j.status==='Livré'?'ok':''];return a.map((x,i)=>`<span class="step ${x}">${x==='ok'?'✓':''}</span>${i<3?`<i class="connector ${x==='ok'?'ok':''}"></i>`:''}`).join('')}
+function filtered(){let q=$('#search').value.toLowerCase(),d=$('#department').value;return jobs.filter(j=>{let matches=!q||(j.patient+j.doctor).toLowerCase().includes(q);return matches&&(!d||j.department===d)&&(view==='retards'?late(j):view==='archives'?j.status==='Livré':j.status!=='Livré')})}
+function render(){let list=filtered(),start=(page-1)*per;let visible=list.slice(start,start+per);if(start>=list.length&&page>1){page=1;return render()}$('#rows').innerHTML=visible.length?visible.map(j=>`<tr><td><div class="stepper" aria-label="Étapes: travail, céramique, contrôle, livraison">${steps(j)}</div></td><td>${esc(j.doctor)}</td><td class="patient">${esc(j.patient)}<span class="sub">${esc(j.department)}</span></td><td class="date">${fmt(j.workIn)}</td><td class="date">${fmt(j.due)}</td><td class="date ${late(j)?'late':''}">${fmt(ceramicDeadline(j))}</td><td class="date">${fmt(j.ceramicIn)}</td><td class="date ${late(j)?'late':''}">${duration(j)}</td><td class="date">${fmt(j.controlIn)}</td><td class="issue">${j.issue?esc(j.issue):'—'}</td><td><span class="badge ${j.status==='Livré'?'delivered':late(j)?'late':'progress'}">${late(j)?'À réclamer':j.status}</span></td><td><button class="action edit" data-id="${j.id}" aria-label="Modifier">✎</button><button class="action delivery" data-id="${j.id}" aria-label="Livrer">🛵</button><button class="action delete" data-id="${j.id}" aria-label="Supprimer">⌫</button></td></tr>`).join(''):'<tr><td colspan="12" style="text-align:center;padding:32px;color:var(--muted)">Aucun travail à afficher.</td></tr>';
+let total=Math.max(1,Math.ceil(list.length/per));$('#pageInfo').textContent=list.length?`${start+1}–${Math.min(start+per,list.length)} sur ${list.length} travaux`:'';$('#pages').innerHTML=Array.from({length:total},(_,i)=>`<button class="${page===i+1?'current':''}" data-page="${i+1}">${i+1}</button>`).join('');let current=jobs.filter(j=>j.status!=='Livré');$('#countCurrent').textContent=current.length;$('#countCeramic').textContent=current.filter(j=>j.ceramicIn&&!j.controlIn).length;$('#countControl').textContent=current.filter(j=>j.controlIn).length;let l=current.filter(late).length;$('#countLate').textContent=l;let until=+localStorage.getItem('atelier-alert-until')||0;$('#notice').classList.toggle('show',l>0&&Date.now()>until&&view==='suivi');$('#lateMsg').textContent=`${l} travail${l>1?'x':''} en attente de céramique.`;}
+function openModal(j){if(document.body.dataset.access!=='éditeur')return alert('Accès observateur : modification non autorisée.');editing=j||null;$('#modalTitle').textContent=j?'Modifier le travail':'Nouveau travail';let f=$('#form');f.reset();if(j)Object.entries(j).forEach(([k,v])=>f.elements[k]&&(f.elements[k].value=v));$('#modal').classList.add('show')}
+function setAccess(role){let editor=role==='éditeur';$('#accessStatus').textContent=`Mode actuel : ${editor?'Éditeur — modification autorisée':'Observateur — consultation uniquement'}`;$('#accessStatus').classList.remove('error');document.body.dataset.access=role}function normalizeSupabaseUrl(value){
+  return value.trim().replace(/\/+$/,'').replace(/\/rest\/v1$/i,'');
+}
+$('#configureOnline').onclick=()=>{
+  $('#cfgUrl').value=normalizeSupabaseUrl(localStorage.getItem('pd-supabase-url')||'');
+  $('#cfgKey').value=localStorage.getItem('pd-supabase-key')||'';
+  $('#configModal').classList.add('show');
+  $('#cfgUrl').focus();
+};
+$('#configClose').onclick=$('#configCancel').onclick=()=>$('#configModal').classList.remove('show');
+$('#configModal').addEventListener('click',e=>{if(e.target.id==='configModal')e.currentTarget.classList.remove('show')});
+$('#configSave').onclick=async ()=>{
+  const url=normalizeSupabaseUrl($('#cfgUrl').value);
+  const key=$('#cfgKey').value.trim();
+  if(!/^https:\/\/[^\s/]+\.supabase\.co$/i.test(url)){
+    alert('URL incorrect. Utilisez uniquement l’adresse du projet, par exemple : https://xxxx.supabase.co');
+    return;
+  }
+  if(!key){
+    alert('Veuillez coller la clé Publishable Supabase.');
+    return;
+  }
+  if(!window.supabase){
+    alert('Le module Supabase n’est pas chargé. Vérifiez votre connexion Internet puis rechargez la page.');
+    return;
+  }
+  $('#configSave').disabled=true;
+  $('#configSave').textContent='Test en cours…';
+  try{
+    const client=window.supabase.createClient(url,key);
+    const {error}=await client.from('jobs').select('id').limit(1);
+    if(error) throw error;
+    localStorage.setItem('pd-supabase-url',url);
+    localStorage.setItem('pd-supabase-key',key);
+    alert('Connexion Supabase réussie ! Le tableau va se recharger en mode partagé.');
+    location.reload();
+  }catch(err){
+    alert('Connexion Supabase impossible : '+(err?.message||err));
+  }finally{
+    $('#configSave').disabled=false;
+    $('#configSave').textContent='Connecter';
+  }
+};
+$('#activateAccess').onclick=()=>{let role=$('#accessRole').value,code=$('#accessCode').value,expected=role==='éditeur'?'2026':'2027';if(code!==expected){$('#accessStatus').textContent='Code incorrect. Réessayez.';$('#accessStatus').classList.add('error');return}setAccess(role);$('#accessCode').value=''};$('#add').onclick=()=>openModal();$('#close').onclick=$('#cancel').onclick=()=>$('#modal').classList.remove('show');$('#dismiss').onclick=()=>{saveAlertUntil();render()};$('#search').oninput=$('#department').onchange=()=>{page=1;render()};document.querySelectorAll('.nav').forEach(b=>b.onclick=()=>{document.querySelector('.nav.active').classList.remove('active');b.classList.add('active');view=b.dataset.view;page=1;$('#title').textContent=view==='suivi'?'Travaux en cours':view==='retards'?'Alertes céramique':'Archives — travaux livrés';$('#subtitle').textContent=view==='archives'?'Historique des livraisons':'Mise à jour en temps réel';render()});
+$('#form').onsubmit=async e=>{e.preventDefault();let data=Object.fromEntries(new FormData(e.target));let ok;if(editing){Object.assign(editing,data);ok=await updateJob(editing)}else{let j={...data,status:'En cours'};jobs.unshift(j);ok=await saveJob(j)}if(ok){$('#modal').classList.remove('show');render()}};document.addEventListener('click',async e=>{let id=+e.target.dataset.id;if(e.target.dataset.page){page=+e.target.dataset.page;render()}if(!id)return;let j=jobs.find(x=>x.id===id);if(!j)return;if(e.target.classList.contains('edit'))openModal(j);if(e.target.classList.contains('delete')){if(document.body.dataset.access!=='éditeur')return alert('Accès observateur : suppression non autorisée.');if(confirm(`Supprimer le travail de ${j.patient} ?`)){if(await deleteJob(j))render()}}if(e.target.classList.contains('delivery')){if(document.body.dataset.access!=='éditeur')return alert('Accès observateur : livraison non autorisée.');j.status='Livré';await updateJob(j);render()}});setAccess('observateur');loadJobs().then(setupRealtime);
+</script></body></html>
