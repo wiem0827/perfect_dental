@@ -58,49 +58,7 @@ $('#form').onsubmit=async e=>{e.preventDefault();if(document.body.dataset.access
 document.addEventListener('click',async e=>{const id=Number(e.target.dataset.id);if(e.target.dataset.page){page=Number(e.target.dataset.page);render();return}if(!id)return;const j=jobs.find(x=>x.id===id);if(!j)return;if(e.target.classList.contains('edit'))openModal(j);if(e.target.classList.contains('delete')){if(document.body.dataset.access!=='éditeur')return alert('Accès observateur : suppression non autorisée.');if(confirm(`Supprimer le travail de ${j.patient} ?`)){if(await deleteJob(j))render()}}if(e.target.classList.contains('delivery')){if(document.body.dataset.access!=='éditeur')return alert('Accès observateur : livraison non autorisée.');const before={...j};j.status='Livré';if(await updateJob(j)){await addHistory(j,before,j);render()}}});
 // Configuration en ligne — fonctionne aussi depuis GitHub Pages.
 function openConfig(){const m=$('#configModal');$('#cfgUrl').value=(localStorage.getItem('pd-supabase-url')||'').replace(/\/rest\/v1\/?$/,'');$('#cfgKey').value=localStorage.getItem('pd-supabase-key')||'';m.classList.add('show')}
-
-window.addEventListener('load', () => {
-  $('#configureOnline').addEventListener('click', openConfig);
-
-  $('#configClose').onclick =
-  $('#configCancel').onclick = () => {
-    $('#configModal').classList.remove('show');
-  };
-
-  $('#configSave').onclick = async () => {
-    const url = $('#cfgUrl').value.trim().replace(/\/rest\/v1\/?$/, '');
-    const key = $('#cfgKey').value.trim();
-
-    if (!/^https:\/\/[a-z0-9-]+\.supabase\.co$/i.test(url) || !key) {
-      alert('Veuillez renseigner une URL Supabase valide et la clé Publishable.');
-      return;
-    }
-
-    localStorage.setItem('pd-supabase-url', url);
-    localStorage.setItem('pd-supabase-key', key);
-
-    alert('Configuration enregistrée. La page va se recharger.');
-    location.reload();
-  };
-});
-    $('#configModal').classList.remove('show');
-  };
-
-  $('#configSave').onclick=async()=>{
-    const url=$('#cfgUrl').value.trim().replace(/\/rest\/v1\/?$/,'');
-    const key=$('#cfgKey').value.trim();
-
-    if(!/^https:\/\/[a-z0-9-]+\.supabase\.co$/i.test(url)||!key){
-      alert('Veuillez renseigner une URL Supabase valide et la clé Publishable.');
-      return;
-    }
-
-    localStorage.setItem('pd-supabase-url',url);
-    localStorage.setItem('pd-supabase-key',key);
-    alert('Configuration enregistrée. La page va se recharger.');
-    location.reload();
-  };
-});$('#configSave').onclick=async()=>{const url=$('#cfgUrl').value.trim().replace(/\/rest\/v1\/?$/,'');const key=$('#cfgKey').value.trim();if(!/^https:\/\/[a-z0-9-]+\.supabase\.co$/i.test(url)||!key){alert('Veuillez renseigner une URL Supabase valide et la clé Publishable.');return}localStorage.setItem('pd-supabase-url',url);localStorage.setItem('pd-supabase-key',key);alert('Configuration enregistrée. La page va se recharger.');location.reload()};
+$('#configureOnline').addEventListener('click',openConfig);$('#configClose').onclick=$('#configCancel').onclick=()=>$('#configModal').classList.remove('show');$('#configSave').onclick=async()=>{const url=$('#cfgUrl').value.trim().replace(/\/rest\/v1\/?$/,'');const key=$('#cfgKey').value.trim();if(!/^https:\/\/[a-z0-9-]+\.supabase\.co$/i.test(url)||!key){alert('Veuillez renseigner une URL Supabase valide et la clé Publishable.');return}localStorage.setItem('pd-supabase-url',url);localStorage.setItem('pd-supabase-key',key);alert('Configuration enregistrée. La page va se recharger.');location.reload()};
 setAccess('observateur');loadJobs().then(setupRealtime);
 </script><div class="modal" id="configModal"><div class="modalbox"><div class="modalhead"><h3>Connexion du tableau partagé</h3><button class="close" id="configClose">×</button></div><p style="color:#64748b;font-size:13px">Collez ici l’URL du projet Supabase et sa clé <b>Publishable</b>. Ne mettez jamais une clé Secret/Service Role.</p><div class="form"><label class="wide">URL du projet Supabase<input id="cfgUrl" placeholder="https://xxxxxxxx.supabase.co"></label><label class="wide">Clé Publishable<input id="cfgKey" placeholder="sb_publishable_..."></label></div><div class="modalfoot"><button class="ghost" id="configCancel">Annuler</button><button class="primary" id="configSave">Enregistrer</button></div></div></div>
 </body></html>
